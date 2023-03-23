@@ -7,4 +7,4 @@ Olimpia Helena García Huerta - A01708462
 
 Imanol Muñiz Ramirez 
 
-Hector?
+Hector Andres Serrania Escamilla - A01701740
