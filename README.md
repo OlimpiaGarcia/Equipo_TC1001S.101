@@ -5,6 +5,6 @@ Repositorio de la semana Tec TC1001S.101 "El arte de la programación"
 
 Olimpia Helena García Huerta - A01708462
 
-Imanol Muñiz Ramirez 
+Imanol Muñiz Ramirez - A0171713
 
 Hector Andres Serrania Escamilla - A01701740
