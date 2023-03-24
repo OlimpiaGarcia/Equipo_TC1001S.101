@@ -1,3 +1,10 @@
+from random import choice
+from turtle import Turtle, bgcolor, clear
+from turtle import up, goto, dot, update
+from turtle import ontimer, setup, hideturtle
+from turtle import tracer, listen, onkey, done
+from freegames import floor, vector
+
 """Pacman, classic arcade game.
 Exercises
 1. Change the board.
@@ -9,9 +16,7 @@ Exercises
 """Versión 4 pacmanA01701740"""
 """En este commit se modifica el codigo
 para que los fantasmas sean más rápidos"""
-from random import choice
-from turtle import *
-from freegames import floor, vector
+
 "Se importan las librerías de turtle graphics y freegames"
 
 
