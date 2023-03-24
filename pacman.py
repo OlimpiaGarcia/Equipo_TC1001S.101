@@ -7,11 +7,10 @@ Exercises
 5. Make the ghosts smarter.
 """
 """Versión 4 pacmanA01701740"""
-"""En este commit se modifica el codigo para que los fantasmas sean más rápidos"""
-
+"""En este commit se modifica el codigo
+para que los fantasmas sean más rápidos"""
 from random import choice
 from turtle import *
-
 from freegames import floor, vector
 "Se importan las librerías de turtle graphics y freegames"
 
@@ -137,7 +136,8 @@ def world():
 
 
 def move():
-    "Mueve al pacman y a los fantasmas y les da el color en la interfaz gráfica"
+    """Mueve al pacman y a los fantasmas y les da el color en la
+    interfaz gráfica"""
     writer.undo()
     writer.write(state['score'])
 
@@ -188,17 +188,21 @@ def move():
     ontimer(move, 100)
     "Que tan rapido se mueve el juego"
 
+
 def change(x, y):
     "Si el pacman puede moverse a las casillas, cambia su dirección"
     if valid(pacman + vector(x, y)):
         aim.x = x
         aim.y = y
 
+
 "De que tamañó será la ventana de la interfaz gráfica"
 setup(420, 420, 370, 0)
 
+
 "Oculta la tortuga de la paquetería de gráficos"
 hideturtle()
+
 
 "Acelerar la animación de los dibujos"
 tracer(False)

@@ -1,0 +1,26 @@
+pacman.py:12:1: E402 module level import not at top of file
+pacman.py:13:1: F403 'from turtle import *' used; unable to detect undefined names
+pacman.py:13:1: E402 module level import not at top of file
+pacman.py:14:1: E402 module level import not at top of file
+pacman.py:24:8: F405 'Turtle' may be undefined, or defined from star imports: turtle
+pacman.py:30:10: F405 'Turtle' may be undefined, or defined from star imports: turtle
+pacman.py:121:5: F405 'bgcolor' may be undefined, or defined from star imports: turtle
+pacman.py:144:5: F405 'clear' may be undefined, or defined from star imports: turtle
+pacman.py:158:5: F405 'up' may be undefined, or defined from star imports: turtle
+pacman.py:159:5: F405 'goto' may be undefined, or defined from star imports: turtle
+pacman.py:160:5: F405 'dot' may be undefined, or defined from star imports: turtle
+pacman.py:178:9: F405 'up' may be undefined, or defined from star imports: turtle
+pacman.py:179:9: F405 'goto' may be undefined, or defined from star imports: turtle
+pacman.py:180:9: F405 'dot' may be undefined, or defined from star imports: turtle
+pacman.py:182:5: F405 'update' may be undefined, or defined from star imports: turtle
+pacman.py:188:5: F405 'ontimer' may be undefined, or defined from star imports: turtle
+pacman.py:200:1: F405 'setup' may be undefined, or defined from star imports: turtle
+pacman.py:204:1: F405 'hideturtle' may be undefined, or defined from star imports: turtle
+pacman.py:208:1: F405 'tracer' may be undefined, or defined from star imports: turtle
+pacman.py:214:1: F405 'listen' may be undefined, or defined from star imports: turtle
+pacman.py:216:1: F405 'onkey' may be undefined, or defined from star imports: turtle
+pacman.py:217:1: F405 'onkey' may be undefined, or defined from star imports: turtle
+pacman.py:218:1: F405 'onkey' may be undefined, or defined from star imports: turtle
+pacman.py:219:1: F405 'onkey' may be undefined, or defined from star imports: turtle
+pacman.py:222:1: F405 'done' may be undefined, or defined from star imports: turtle
+pacman.py:222:7: W292 no newline at end of file
