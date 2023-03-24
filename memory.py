@@ -109,6 +109,15 @@ def draw():
         done()
         exit()
     
+    if cont == 32:
+        clear()
+        color("Red")
+        goto(0, 0)
+        write('Victory', align = "center", font = ("Arial", 30, "bold"))
+        goto(0, -50)
+        done()
+        exit()
+    
     update()
     ontimer(draw, 100)
 
