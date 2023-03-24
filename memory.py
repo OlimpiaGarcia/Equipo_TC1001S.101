@@ -69,10 +69,14 @@ def tap(x, y):
 
     if mark is None or mark == spot or tiles[mark] != tiles[spot]:
         state['mark'] = spot
+        secincrement()
+        print("Number of try", COUNT)
     else:
         hide[spot] = False
         hide[mark] = False
         state['mark'] = None
+        increment()
+        print(cont)
 
 
 def draw():
