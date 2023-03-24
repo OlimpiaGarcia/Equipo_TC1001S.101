@@ -104,7 +104,7 @@ def draw():
         clear()
         color("Red")
         goto(0, 0)
-        write("Game Over", align = "center", font = ("Georgia", 30 , "bold"))
+        write("Game Over", align = "center", font = ("Arial", 30 , "bold"))
         goto("0, -50")
         done()
         exit()
