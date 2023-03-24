@@ -100,6 +100,15 @@ def draw():
         color('black')
         write(tiles[mark], font=('Arial', 30, 'normal'))
 
+    if COUNT > 100:
+        clear()
+        color("Red")
+        goto(0, 0)
+        write("Game Over", align = "center", font = ("Georgia", 30 , "bold"))
+        goto("0, -50")
+        done()
+        exit()
+    
     update()
     ontimer(draw, 100)
 
