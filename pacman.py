@@ -1,30 +1,55 @@
 """Pacman, classic arcade game.
-
 Exercises
-
 1. Change the board.
 2. Change the number of ghosts.
 3. Change where pacman starts.
 4. Make the ghosts faster/slower.
 5. Make the ghosts smarter.
 """
+"""Versión 2 pacmanA01701740"""
+"""En este commit se agregaron comentarios al código original"""
 
 from random import choice
 from turtle import *
 
 from freegames import floor, vector
+"Se importan las librerías de turtle graphics y freegames"
+
 
 state = {'score': 0}
+
+
+"Comienza el puntaje del juego en 0"
+
+
 path = Turtle(visible=False)
+
+
+"Evita que se muestre un indicador de por donde se mueve el pacman"
+
+
 writer = Turtle(visible=False)
+
+
+"Evita que se muestren figuras innecesarias donde se encuentra el score"
+
+
 aim = vector(5, 0)
 pacman = vector(-40, -80)
+
+
+"En que lugar se generará el pacman"
+
+
 ghosts = [
     [vector(-180, 160), vector(5, 0)],
     [vector(-180, -160), vector(0, 5)],
     [vector(100, 160), vector(0, -5)],
     [vector(100, -160), vector(-5, 0)],
 ]
+
+"En que lugar se generarán los fantasmas y a que velocidad se moverán."
+
 # fmt: off
 tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -48,11 +73,14 @@ tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 ]
+
+"Crea el mapa para jugar"
+
 # fmt: on
 
 
 def square(x, y):
-    """Draw square using path at (x, y)."""
+    "dibuja un cuadrado en el camino (x,y)."
     path.up()
     path.goto(x, y)
     path.down()
@@ -74,7 +102,7 @@ def offset(point):
 
 
 def valid(point):
-    """Return True if point is valid in tiles."""
+    "Devuelve True si el punto es valido para moverse"
     index = offset(point)
 
     if tiles[index] == 0:
@@ -89,7 +117,7 @@ def valid(point):
 
 
 def world():
-    """Draw world using path."""
+    "Dibuja los colores que tendrá el mundo para hacer el mapa."
     bgcolor('black')
     path.color('blue')
 
@@ -108,7 +136,7 @@ def world():
 
 
 def move():
-    """Move pacman and all ghosts."""
+    "Mueve al pacman y a los fantasmas y les da el color en la interfaz gráfica"
     writer.undo()
     writer.write(state['score'])
 
@@ -158,19 +186,26 @@ def move():
 
 
 def change(x, y):
-    """Change pacman aim if valid."""
+    "Si el pacman puede moverse a las casillas, cambia su dirección"
     if valid(pacman + vector(x, y)):
         aim.x = x
         aim.y = y
 
-
+"De que tamañó será la ventana de la interfaz gráfica"
 setup(420, 420, 370, 0)
+
+"Oculta la tortuga de la paquetería de gráficos"
 hideturtle()
+
+"Acelerar la animación de los dibujos"
 tracer(False)
+
+"En que posición estará el score y de que color"
 writer.goto(160, 160)
 writer.color('white')
 writer.write(state['score'])
 listen()
+"Los personajes se pueden mover en las 4 direcciones"
 onkey(lambda: change(5, 0), 'Right')
 onkey(lambda: change(-5, 0), 'Left')
 onkey(lambda: change(0, 5), 'Up')
