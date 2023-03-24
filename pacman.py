@@ -6,8 +6,8 @@ Exercises
 4. Make the ghosts faster/slower.
 5. Make the ghosts smarter.
 """
-"""Versión 3 pacmanA01701740"""
-"""En este commit se modifica el codigo para cambiar el tablero"""
+"""Versión 4 pacmanA01701740"""
+"""En este commit se modifica el codigo para que los fantasmas sean más rápidos"""
 
 from random import choice
 from turtle import *
@@ -42,13 +42,14 @@ pacman = vector(-40, -80)
 
 
 ghosts = [
-    [vector(-180, 160), vector(5, 0)],
-    [vector(-180, -160), vector(0, 5)],
-    [vector(100, 160), vector(0, -5)],
-    [vector(100, -160), vector(-5, 0)],
+    [vector(-180, 160), vector(10, 0)],
+    [vector(-180, -160), vector(0, 10)],
+    [vector(100, 160), vector(0, -10)],
+    [vector(100, -160), vector(-10, 0)],
 ]
 
-"En que lugar se generarán los fantasmas y a que velocidad se moverán."
+"""En que lugar se generarán los fantasmas y hacia que direcciones
+comienzan moviendose y a que velocidad"""
 
 # fmt: off
 tiles = [
@@ -161,12 +162,14 @@ def move():
     for point, course in ghosts:
         if valid(point + course):
             point.move(course)
+            "A que velocidad se mueven en cada dirección"
+            "Cambio de direccion de los fantasmas si chocan"
         else:
             options = [
-                vector(5, 0),
-                vector(-5, 0),
-                vector(0, 5),
-                vector(0, -5),
+                vector(10, 0),
+                vector(-10, 0),
+                vector(0, 10),
+                vector(0, -10),
             ]
             plan = choice(options)
             course.x = plan.x
@@ -183,7 +186,7 @@ def move():
             return
 
     ontimer(move, 100)
-
+    "Que tan rapido se mueve el juego"
 
 def change(x, y):
     "Si el pacman puede moverse a las casillas, cambia su dirección"
