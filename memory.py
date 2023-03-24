@@ -27,6 +27,17 @@ tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
 
+cont = 0
+COUNT = 0
+
+def increment():
+    global cont
+    cont +=1
+
+def secincrement():
+    global COUNT
+    COUNT +=1
+
 
 def square(x, y):
     """Draw white square with black outline at (x, y)."""
