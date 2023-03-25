@@ -32,3 +32,11 @@ Juego : Tic Tac Toe
     4.- Implementación de  una función con el objetivo de detectar cuando una casilla este ocupada
 
     5.- Corrección de código bajo flake8
+
+Juego: Memory
+  Cambios:
+  1.- Comentarios agregados al codigo original
+  2.- Agregar contadores globales
+  3.- Desplegar el numero de taps 
+  4.- Desplegar mensaje de victoria y derrota
+  5.- Cambiar los imports * por funciones del programa
