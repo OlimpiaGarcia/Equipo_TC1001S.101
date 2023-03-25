@@ -35,8 +35,12 @@ Juego : Tic Tac Toe
 
 Juego: Memory
   Cambios:
-  1.- Comentarios agregados al codigo original
-  2.- Agregar contadores globales
-  3.- Desplegar el numero de taps 
-  4.- Desplegar mensaje de victoria y derrota
-  5.- Cambiar los imports * por funciones del programa
+  
+    1.- Comentario agregados al código original
+    2.- Agregar contadores globales
+    3.- Desplegar el numero de taps 
+    4.- Desplegar mensaje de victoria y derrota
+    5.- Cambiar los imports * por funciones del programa
+
+ 
+
