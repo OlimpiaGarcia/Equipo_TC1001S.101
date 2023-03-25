@@ -9,6 +9,7 @@ Exercises:
 5. Use letters instead of tiles.
 """
 
+"""Importar librerias"""
 
 from turtle import up, goto, down
 from turtle import color, begin_fill, forward
@@ -27,6 +28,8 @@ tiles = list(range(32)) * 2
 state = {'mark': None}
 hide = [True] * 64
 
+"""Definir variables globales"""
+
 cont = 0
 COUNT = 0
 
@@ -39,8 +42,9 @@ def secincrement():
     COUNT +=1
 
 
+"""Draw white square with black outline at (x, y)."""
+
 def square(x, y):
-    """Draw white square with black outline at (x, y)."""
     up()
     goto(x, y)
     down()
@@ -51,19 +55,19 @@ def square(x, y):
         left(90)
     end_fill()
 
+"""Convert (x, y) coordinates to tiles index."""
 
 def index(x, y):
-    """Convert (x, y) coordinates to tiles index."""
     return int((x + 200) // 50 + ((y + 200) // 50) * 8)
 
+"""Convert tiles count to (x, y) coordinates."""
 
 def xy(count):
-    """Convert tiles count to (x, y) coordinates."""
     return (count % 8) * 50 - 200, (count // 8) * 50 - 200
 
+"""Update mark and hidden tiles based on tap."""
 
 def tap(x, y):
-    """Update mark and hidden tiles based on tap."""
     spot = index(x, y)
     mark = state['mark']
 
@@ -78,9 +82,9 @@ def tap(x, y):
         increment()
         print(cont)
 
+"""Draw image and tiles."""
 
 def draw():
-    """Draw image and tiles."""
     clear()
     goto(0, 0)
     shape(car)
