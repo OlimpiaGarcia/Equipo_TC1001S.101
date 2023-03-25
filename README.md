@@ -15,4 +15,10 @@ Juego : Pacman
     2.- Cambios al tablero original del juego
     3.- Cambios a la velocidad de movimiento de los fantasmas del juego.
     4.- Corrección de código bajo la validación flake8
-    
+
+Juego : Tic Tac Toe
+  Cambios:
+    1.- Comentario agregados al código original
+    2.- Se cambiaron los tamaños de los círculos y cruces
+    3.- Se cambiaron los colores de los círculos y cruces
+    4.- Se implementó una función con el objetivo de detectar cuando una casilla este ocupada

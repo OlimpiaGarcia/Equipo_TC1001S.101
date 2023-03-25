@@ -29,17 +29,74 @@ def drawo(x, y):
 
 def floor(value):
     """Round value down to grid with square size 133."""
-    return ((value + 200) // 133) * 133 - 200
+    aux=((value + 200) // 133) * 133 - 200
+    print(aux)
+    return aux
+
+def occupied(x, y,casillas):
+    """Verifies if the box is occupied"""
+    if x==-200.0 and y==66.0:
+        if casillas[0]==False:
+            casillas[0]=True
+        else:
+            return True
+    if x==-67.0 and y==66.0:
+        if casillas[1]==False:
+            casillas[1]=True
+        else:
+            return True
+    if x==66.0 and y==66.0:
+        if casillas[2]==False:
+            casillas[2]=True
+        else:
+            return True
+    if x==-200.0 and y==-67.0:
+        if casillas[3]==False:
+            casillas[3]=True
+        else:
+            return True
+    if x==-67.0 and y==-67.0:
+        if casillas[4]==False:
+            casillas[4]=True
+        else:
+            return True
+    if x==66.0 and y==-67.0:
+        if casillas[5]==False:
+            casillas[5]=True
+        else:
+            return True
+    if x==-200.0 and y==-200.0:
+        if casillas[6]==False:
+            casillas[6]=True
+        else:
+            return True
+    if x==-67.0 and y==-200.0:
+        if casillas[7]==False:
+            casillas[7]=True
+        else:
+            return True
+    if x==66.0 and y==-200.0:
+        if casillas[8]==False:
+            casillas[8]=True
+        else:
+            return True
 
 
 state = {'player': 0}
 players = [drawx, drawo]
-
+"""This list saves the state of boxes"""
+casillas=[]
+num_casillas=9
+for i in range (num_casillas):
+    casillas.append(False)
 
 def tap(x, y):
     """Draw X or O in tapped square."""
     x = floor(x)
     y = floor(y)
+    occ=occupied(x,y,casillas)
+    if occ==True:
+        return
     player = state['player']
     draw = players[player]
     draw(x, y)
@@ -52,7 +109,10 @@ setup(420, 420, 370, 0)
 hideturtle()
 """Quits the tracer animation"""
 tracer(False)
+"""Draws the grid"""
 grid()
+"""Updates the drawings when is required"""
 update()
+"""Captures the mouse click"""
 onscreenclick(tap)
 done()
