@@ -11,6 +11,7 @@ Hector Andres Serrania Escamilla - A01701740
 
 Juego : Pacman
   Cambios: 
+  
     1.- Comentarios agregados al codigo original
     
     2.- Cambios al tablero original del juego
@@ -21,6 +22,7 @@ Juego : Pacman
 
 Juego : Tic Tac Toe
   Cambios:
+  
     1.- Comentario agregados al código original
 
     2.- Cambios en los tamaños de los círculos y cruces
