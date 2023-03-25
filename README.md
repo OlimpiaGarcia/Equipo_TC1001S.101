@@ -19,6 +19,11 @@ Juego : Pacman
 Juego : Tic Tac Toe
   Cambios:
     1.- Comentario agregados al código original
-    2.- Se cambiaron los tamaños de los círculos y cruces
-    3.- Se cambiaron los colores de los círculos y cruces
-    4.- Se implementó una función con el objetivo de detectar cuando una casilla este ocupada
+
+    2.- Cambios en los tamaños de los círculos y cruces
+
+    3.- Cambios en los colores de los círculos y cruces
+ 
+    4.- Implementación de  una función con el objetivo de detectar cuando una casilla este ocupada
+
+    5.- Corrección de código bajo flake8
